@@ -1,0 +1,244 @@
+/*class Generales*/
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.evenly {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row_evenly {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly
+}
+
+.column_between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.colorWhite {
+    color: white;
+}
+
+.backWhite {
+    background-color: white;
+}
+
+.backGris {
+    background: #F6F6F6;
+
+}
+
+.colorNoir {
+    color: #353535;
+}
+
+.backNoir {
+    background-color: #353535;
+}
+
+.colorRose {
+    color: #FF79DA;
+}
+
+.backRose {
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+
+}
+
+.colorViolet {
+    color: #9356DC;
+}
+
+.backViolet {
+    background-color: #9356DC;
+}
+
+.colorGreen {
+    color: #99E2D0;
+}
+
+.backGreen {
+    background-color: #99E2D0;
+}
+
+.colorBlack {
+    color: black;
+}
+
+.noDecoration {
+    text-decoration: none;
+}
+
+.noBorder {
+    border: none;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+ul,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+}
+
+.logo_ohmyfood {
+    width: 215px;
+    height: 36px;
+    margin: 3%;
+}
+
+.font_Logo--title {
+    font-family: 'Shrikhand', cursive;
+}
+
+.header_infoMenu {
+    background: #EAEAEA;
+    width: 100%;
+    padding: 3%;
+}
+
+.header_menuLocation {
+    padding-left: 5%;
+}
+
+#section_info {
+    padding: 10%;
+}
+
+.section_textReservation * {
+    margin-bottom: 15px;
+}
+
+.padding_section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.info_button {
+    border-radius: 25px;
+    width: 218px;
+    height: 50px;
+    margin-top: 30px;
+}
+
+.fonctionnement_bouton {
+    position: relative;
+    border-radius: 20px;
+    width: 95%;
+    height: 72px;
+    margin: 2% auto;
+}
+
+.fonctionnement_bouton::before {
+    content: attr(data-numero);
+    /* Récupère le numéro depuis l'attribut data-numero */
+    display: block;
+    position: absolute;
+    left: -10px;
+    /* Ajustez cette valeur pour positionner le numéro */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background-color: #9356DC;
+    /* Couleur du cercle */
+    color: white;
+    /* Couleur du texte (numéro) */
+    text-align: center;
+    line-height: 25px;
+    font-size: 14px;
+    border-radius: 50%;
+    /* Crée un cercle */
+    z-index: 1;
+    /* Place le numéro derrière le bouton */
+}
+
+.fonctionnement_iconeButton {
+    color: #7E7E7E;
+
+}
+
+.title {
+    padding: 5%;
+}
+
+.restaurant_card {
+
+    width: 90%;
+    margin: auto;
+}
+
+.restaurant_card--photo {
+    border-radius: 20px 20px 0px 0px;
+    height: 230px;
+}
+
+.container_textCard {
+    padding: 20px 25px 15px 10px;
+    margin-bottom: 4%;
+    border-radius: 0px 0px 20px 20px;
+}
+
+footer {
+    padding: 20px;
+}
+
+.footer_link {
+    list-style-type: none;
+
+
+}
