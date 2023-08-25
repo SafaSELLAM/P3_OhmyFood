@@ -133,6 +133,16 @@ p {
 body {
     font-family: 'Roboto', sans-serif;
     width: 100%;
+    margin: 0;
+}
+
+.header_menu {
+    padding: 1% 10% 1% 0%;
+
+}
+
+.header_leftArrow {
+    font-size: 24px;
 }
 
 .logo_ohmyfood {
@@ -168,7 +178,7 @@ body {
     padding-bottom: 30px;
 }
 
-.info_button {
+.button_rose {
     border-radius: 25px;
     width: 218px;
     height: 50px;
@@ -216,6 +226,11 @@ body {
     padding: 5%;
 }
 
+.link_pages {
+    text-decoration: none;
+    color: #353535;
+}
+
 .restaurant_card {
 
     width: 90%;
@@ -241,4 +256,33 @@ footer {
     list-style-type: none;
 
 
+}
+
+#menu {
+    /* width: 80%; */
+    border-radius: 40px 40px 0 0;
+    z-index: 1;
+    position: relative;
+    margin: 0 auto;
+    padding: 3%;
+}
+
+.title_menu {
+    padding: 4%;
+    border-radius: 40px 40px 0 0;
+    width: 97%;
+}
+
+.details_menu {
+    width: 100%;
+}
+
+.menu_card--container {
+    margin: 3% auto;
+    border-radius: 20px;
+    padding: 4%;
+}
+
+.menu_button {
+    margin-bottom: 7%;
 }
