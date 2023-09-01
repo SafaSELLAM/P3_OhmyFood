@@ -107,6 +107,10 @@
     font-weight: 600;
 }
 
+.light {
+    font-weight: 400;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -188,7 +192,7 @@ body {
 .fonctionnement_bouton {
     position: relative;
     border-radius: 20px;
-    width: 95%;
+    width: 90%;
     height: 72px;
     margin: 2% auto;
 }
@@ -223,7 +227,7 @@ body {
 }
 
 .title {
-    padding: 5%;
+    padding: 3%;
 }
 
 .link_pages {
@@ -254,17 +258,25 @@ footer {
 
 .footer_link {
     list-style-type: none;
+    z-index: -1;
 
+}
+
+.restaurant_header--photo {
+    transform: translateY(20%);
+    position: relative;
+    z-index: -1;
 
 }
 
 #menu {
-    /* width: 80%; */
+    width: 100%;
     border-radius: 40px 40px 0 0;
-    z-index: 1;
-    position: relative;
     margin: 0 auto;
     padding: 3%;
+
+
+
 }
 
 .title_menu {
@@ -285,4 +297,41 @@ footer {
 
 .menu_button {
     margin-bottom: 7%;
+}
+
+@media screen and (min-width: 768px) {
+    .fonctionnement_BarreBoutons {
+        flex-direction: row;
+        width: 90%;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+
+    .fonctionnement_bouton {
+        /* margin: 2%; */
+        width: 30%;
+    }
+
+    .restaurants_cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* Deux éléments par colonne */
+        gap: 20px;
+        /* Espacement entre les éléments */
+    }
+
+    #footer {
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .footer_links {
+        flex-direction: row;
+        width: 65%;
+        /* margin: 3%; */
+    }
+
+    .footer_link {
+        margin: 2%;
+    }
 }
