@@ -145,18 +145,34 @@ body {
 
 }
 
-.header_leftArrow {
+.header_container {
+    align-items: center;
+}
+
+.arrow_left_header {
+    width: 10%;
+    text-align: center;
     font-size: 24px;
+}
+
+.img_header_menu {
+    width: 84%;
+    display: flex;
+    place-content: center;
 }
 
 .logo_ohmyfood {
     width: 215px;
     height: 36px;
-    margin: 3%;
+    margin: 1%;
 }
 
 .font_Logo--title {
     font-family: 'Shrikhand', cursive;
+}
+
+.font_size--title {
+    font-size: 28px;
 }
 
 .header_infoMenu {
@@ -174,6 +190,7 @@ body {
 }
 
 .section_textReservation * {
+    text-align: center;
     margin-bottom: 15px;
 }
 
@@ -189,12 +206,20 @@ body {
     margin-top: 30px;
 }
 
+.button_rose:hover {
+    cursor: pointer;
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+
+}
+
 .fonctionnement_bouton {
     position: relative;
     border-radius: 20px;
     width: 90%;
     height: 72px;
     margin: 2% auto;
+    cursor: pointer;
 }
 
 .fonctionnement_bouton::before {
@@ -226,6 +251,10 @@ body {
 
 }
 
+.fonctionnement_bouton:hover .fonctionnement_iconeButton {
+    color: #9356dc;
+}
+
 .title {
     padding: 3%;
 }
@@ -246,6 +275,37 @@ body {
     height: 230px;
 }
 
+.icone_coeur-label .icone_coeur {
+    cursor: pointer;
+}
+
+.hidden-checkbox {
+    display: none;
+}
+
+
+.icone_coeurPlein {
+    display: none !important;
+}
+
+.hidden-checkbox:not(:checked)+.icone_coeur-label .icone_coeur {
+    display: block;
+}
+
+.hidden-checkbox:checked+.icone_coeur-label .icone_coeur {
+    display: none;
+}
+
+.hidden-checkbox:checked+.icone_coeur-label .icone_coeurPlein {
+    display: block !important;
+    color: #9356dc;
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+
+}
+
+
+
+
 .container_textCard {
     padding: 20px 25px 15px 10px;
     margin-bottom: 4%;
@@ -256,14 +316,17 @@ footer {
     padding: 20px;
 }
 
+.footer_logo {
+    margin-bottom: 3%;
+}
+
 .footer_link {
     list-style-type: none;
-    z-index: -1;
+    margin-top: 2%;
 
 }
 
 .restaurant_header--photo {
-    transform: translateY(20%);
     position: relative;
     z-index: -1;
 
@@ -274,9 +337,7 @@ footer {
     border-radius: 40px 40px 0 0;
     margin: 0 auto;
     padding: 3%;
-
-
-
+    margin-top: -15%;
 }
 
 .title_menu {
@@ -299,6 +360,26 @@ footer {
     margin-bottom: 7%;
 }
 
+.title_underline {
+    padding-bottom: 6px;
+    border-bottom: 4px solid #99E2D0;
+}
+
+.home_newMenu {
+    position: relative;
+}
+
+.new {
+    position: absolute;
+    width: 30%;
+    height: 10%;
+    padding: 5%;
+    top: 10%;
+    right: 5%;
+    color: #008766;
+
+}
+
 @media screen and (min-width: 768px) {
     .fonctionnement_BarreBoutons {
         flex-direction: row;
@@ -308,27 +389,43 @@ footer {
     }
 
     .fonctionnement_bouton {
-        /* margin: 2%; */
         width: 30%;
+    }
+
+    .new {
+        padding: 3%;
+        width: 20%;
     }
 
     .restaurants_cards {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        /* Deux éléments par colonne */
         gap: 20px;
-        /* Espacement entre les éléments */
+    }
+
+    .title_menu {
+        width: 33%;
+        padding: 0;
+    }
+
+    #menu {
+        width: 80%;
     }
 
     #footer {
+        display: flex;
         flex-direction: row-reverse;
         align-items: center;
+    }
+
+    .footer_logo {
+        margin-bottom: 0;
     }
 
     .footer_links {
         flex-direction: row;
         width: 65%;
-        /* margin: 3%; */
+        margin-top: 0%;
     }
 
     .footer_link {
