@@ -37,9 +37,11 @@
           <p>
             Découvrez des restaurants d'exception, sélectionnés par nos soins
           </p>
-          <button class="button_rose bold colorWhite backRose noBorder">
-            Explorez nos restaurants
-          </button>
+          <a href="#restaurants">
+            <button class="button_rose bold colorWhite backRose noBorder">
+              Explorez nos restaurants
+            </button>
+          </a>
         </div>
       </section>
       <section id="fonctionnement" class="padding_section">
@@ -75,34 +77,50 @@
         <div class="restaurants_cards column">
           <a href="restaurants/menu1.html" class="link_pages">
             <div class="restaurant_card">
-              <img
-                src="assets/restaurants/jay-wennington.jpg"
-                alt="photo_plat_restaurant_1"
-                class="restaurant_card--photo"
-              />
+              <div class="home_newMenu">
+                <img
+                  src="assets/restaurants/jay-wennington.jpg"
+                  alt="photo_plat_restaurant_1"
+                  class="restaurant_card--photo"
+                />
+                <div class="new backGreen bold center">Nouveau</div>
+              </div>
               <div class="container_textCard row between backWhite">
                 <div class="textCard column">
                   <h3>La palette du goût</h3>
                   <p>Ménilmontant</p>
                 </div>
-                <i class="fa-regular fa-heart center icone_coeur"></i>
+                <input
+                  type="checkbox"
+                  id="coeur-checkbox"
+                  class="hidden-checkbox"
+                />
+                <label for="coeur-checkbox" class="icone_coeur-label">
+                  <i
+                    class="fa-solid fa-heart fa-xl center icone_coeurPlein"
+                  ></i>
+                  <i class="fa-regular fa-heart fa-xl center icone_coeur"></i>
+                </label>
               </div>
             </div>
           </a>
 
           <a href="restaurants/menu2.html" class="link_pages">
             <div class="restaurant_card">
-              <img
-                src="assets/restaurants/louis-hansel.jpg"
-                alt="photo_plat_restaurant_2"
-                class="restaurant_card--photo"
-              />
+              <div class="home_newMenu">
+                <img
+                  src="assets/restaurants/louis-hansel.jpg"
+                  alt="photo_plat_restaurant_2"
+                  class="restaurant_card--photo"
+                />
+                <div class="new backGreen bold center">Nouveau</div>
+              </div>
               <div class="container_textCard row between backWhite">
                 <div class="textCard column">
                   <h3>Le délice des sens</h3>
                   <p>Folie-Méricourt</p>
                 </div>
-                <i class="fa-regular fa-heart center"></i>
+                <i class="fa-regular fa-heart fa-xl center"></i>
               </div>
             </div>
           </a>
@@ -119,7 +137,7 @@
                   <h3>La note enchantée</h3>
                   <p>Charonne</p>
                 </div>
-                <i class="fa-regular fa-heart center icone_coeur"></i>
+                <i class="fa-regular fa-heart fa-xl center icone_coeur"></i>
               </div>
             </div>
           </a>
@@ -135,7 +153,7 @@
                   <h3>À la française</h3>
                   <p>Cité Rouge</p>
                 </div>
-                <i class="fa-regular fa-heart center"></i>
+                <i class="fa-regular fa-heart fa-xl center"></i>
               </div>
             </div>
           </a>
@@ -144,9 +162,10 @@
     </main>
     <footer id="footer" class="backNoir column">
       <p class="footer_logo font_Logo--title colorWhite">ohmyfood</p>
-      <ul class="footer_links column colorWhite">
+      <ul class="footer_links colorWhite column">
         <li class="footer_link">
-          <i class="fa-solid fa-utensils"></i> Proposer un restaurant
+          <i class="fa-solid fa-utensils icone_footer"></i> Proposer un
+          restaurant
         </li>
         <li class="footer_link">
           <i class="fa-solid fa-handshake-angle"></i> Devenir partenaire
