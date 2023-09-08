@@ -18,15 +18,19 @@
   </head>
   <body>
     <header>
-      <div class="header_menu around row">
-        <a href="../index.html" class="link_pages">
-          <i class="fa-solid fa-arrow-left header_leftArrow"></i>
-        </a>
-        <img
-          src="../assets/logo/ohmyfood.png"
-          alt="logo_ohmyfood "
-          class="logo_ohmyfood"
-        />
+      <div class="row header_container">
+        <div class="arrow_left_header">
+          <a href="../index.html" class="link_pages">
+            <i class="fa-solid fa-arrow-left"></i>
+          </a>
+        </div>
+        <div class="img_header_menu">
+          <img
+            src="../assets/logo/ohmyfood.png"
+            alt="logo_ohmyfood "
+            class="logo_ohmyfood"
+          />
+        </div>
       </div>
     </header>
     <img
@@ -37,80 +41,80 @@
     <main>
       <section id="menu" class="backGris center column">
         <div class="title_menu row between">
-          <h1 class="font_Logo--title">Le délice des sens</h1>
-          <i class="fa-regular fa-heart"></i>
+          <h1 class="font_Logo--title font_size--title">Le délice des sens</h1>
+          <i class="fa-regular fa-heart fa-2xl"></i>
         </div>
         <div class="details_menu">
-          <h2>Entrées</h2>
-          <div class="menu_card--container row between backWhite">
-            <div class="container_text">
-              <h3>Tartare de thon</h3>
+          <h2 class="light"><span class="title_underline">ENTR</span>EES</h2>
+          <div class="menu_card--container column backWhite">
+            <h3>Tartare de thon</h3>
+            <div class="container_text row between">
               <p>Assaisonné au yuzu</p>
+              <p>25€</p>
             </div>
-            <p>25€</p>
           </div>
-          <div class="menu_card--container row between backWhite">
-            <div class="container_text">
-              <h3>Bouchée de homard croustillant</h3>
+          <div class="menu_card--container column backWhite">
+            <h3>Bouchée de homard croustillant</h3>
+            <div class="container_text row between">
               <p>Et sa farandole de petits légumes</p>
+              <p>35€</p>
             </div>
-            <p>35€</p>
           </div>
-          <div class="menu_card--container row between backWhite">
-            <div class="container_text">
-              <h3>Velouté de cèpes</h3>
+          <div class="menu_card--container column backWhite">
+            <h3>Velouté de cèpes</h3>
+            <div class="container_text row between">
               <p>Aux truffes</p>
+              <p>20€</p>
             </div>
-            <p>20€</p>
           </div>
         </div>
         <div class="details_menu">
-          <h2>Plats</h2>
+          <h2 class="light"><span class="title_underline">PLAT</span>S</h2>
 
-          <div class="menu_card--container row between backWhite">
-            <div class="container_text">
-              <h3>Poulet rôti aux herbes de Provence</h3>
+          <div class="menu_card--container column backWhite">
+            <h3>Poulet rôti aux herbes de Provence</h3>
+            <div class="container_text row between">
               <p>Et sa crème de truffe</p>
+              <p>40€</p>
             </div>
-            <p>40€</p>
           </div>
-          <div class="menu_card--container row between backWhite">
-            <div class="container_text">
-              <h3>Langouste rôtie</h3>
+          <div class="menu_card--container column backWhite">
+            <h3>Langouste rôtie</h3>
+            <div class="container_text row between">
               <p>Et ses légumes de saison</p>
+              <p>35€</p>
             </div>
-            <p>35€</p>
           </div>
-          <div class="menu_card--container row between backWhite">
-            <div class="container_text">
-              <h3>Côte de bœuf Angus</h3>
+          <div class="menu_card--container column backWhite">
+            <h3>Côte de bœuf Angus</h3>
+            <div class="container_text row between">
               <p>Et sa purée de panais</p>
+              <p>44€</p>
             </div>
-            <p>44€</p>
           </div>
         </div>
         <div class="details_menu">
-          <h2>Desserts</h2>
-          <div class="menu_card--container row between backWhite">
-            <div class="container_text">
-              <h3>Farandole de desserts</h3>
+          <h2 class="light"><span class="title_underline">DESS</span>ERTS</h2>
+          <div class="menu_card--container column backWhite">
+            <h3>Farandole de desserts</h3>
+            <div class="container_text row between">
               <p>Du chef</p>
+              <p>18€</p>
             </div>
-            <p>18€</p>
           </div>
-          <div class="menu_card--container row between backWhite">
-            <div class="container_text">
-              <h3>Crème brulée</h3>
+          <div class="menu_card--container column backWhite">
+            <h3>Crème brulée</h3>
+            <div class="container_text row between">
               <p>Revisitée</p>
+              <p>22€</p>
             </div>
-            <p>22€</p>
           </div>
-          <div class="menu_card--container row between backWhite">
-            <div class="container_text">
-              <h3>Tiramisu</h3>
+          <div class="menu_card--container column backWhite">
+            <h3>Tiramisu</h3>
+            <div class="container_text row between">
               <p>À la noisette</p>
+              <p>23€</p>
             </div>
-            <p>23€</p>
           </div>
         </div>
         <button
@@ -120,11 +124,12 @@
         </button>
       </section>
     </main>
-    <footer id="footer" class="backNoir">
+    <footer id="footer" class="backNoir column">
       <p class="footer_logo font_Logo--title colorWhite">ohmyfood</p>
-      <ul class="footer_links colorWhite">
+      <ul class="footer_links colorWhite column">
         <li class="footer_link">
-          <i class="fa-solid fa-utensils"></i> Proposer un restaurant
+          <i class="fa-solid fa-utensils icone_footer"></i> Proposer un
+          restaurant
         </li>
         <li class="footer_link">
           <i class="fa-solid fa-handshake-angle"></i> Devenir partenaire
