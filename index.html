@@ -19,6 +19,11 @@
     />
   </head>
   <body>
+    <!-- <div id="loader-container">
+      <div class="dot d1"></div>
+      <div class="dot d2"></div>
+      <div class="dot d3"></div>
+    </div> -->
     <header class="center column">
       <img
         src="assets\logo\ohmyfood.png"
@@ -120,7 +125,17 @@
                   <h3>Le délice des sens</h3>
                   <p>Folie-Méricourt</p>
                 </div>
-                <i class="fa-regular fa-heart fa-xl center"></i>
+                <input
+                  type="checkbox"
+                  id="coeur-checkbox2"
+                  class="hidden-checkbox"
+                />
+                <label for="coeur-checkbox2" class="icone_coeur-label">
+                  <i
+                    class="fa-solid fa-heart fa-xl center icone_coeurPlein"
+                  ></i>
+                  <i class="fa-regular fa-heart fa-xl center icone_coeur"></i>
+                </label>
               </div>
             </div>
           </a>
@@ -137,7 +152,17 @@
                   <h3>La note enchantée</h3>
                   <p>Charonne</p>
                 </div>
-                <i class="fa-regular fa-heart fa-xl center icone_coeur"></i>
+                <input
+                  type="checkbox"
+                  id="coeur-checkbox3"
+                  class="hidden-checkbox"
+                />
+                <label for="coeur-checkbox3" class="icone_coeur-label">
+                  <i
+                    class="fa-solid fa-heart fa-xl center icone_coeurPlein"
+                  ></i>
+                  <i class="fa-regular fa-heart fa-xl center icone_coeur"></i>
+                </label>
               </div>
             </div>
           </a>
@@ -153,7 +178,17 @@
                   <h3>À la française</h3>
                   <p>Cité Rouge</p>
                 </div>
-                <i class="fa-regular fa-heart fa-xl center"></i>
+                <input
+                  type="checkbox"
+                  id="coeur-checkbox4"
+                  class="hidden-checkbox"
+                />
+                <label for="coeur-checkbox4" class="icone_coeur-label">
+                  <i
+                    class="fa-solid fa-heart fa-xl center icone_coeurPlein"
+                  ></i>
+                  <i class="fa-regular fa-heart fa-xl center icone_coeur"></i>
+                </label>
               </div>
             </div>
           </a>
@@ -170,8 +205,8 @@
         <li class="footer_link">
           <i class="fa-solid fa-handshake-angle"></i> Devenir partenaire
         </li>
-        <li class="footer_link">Mantions légales</li>
-        <li class="footer_link">Contact</li>
+        <li class="footer_link">Mentions légales</li>
+        <a href="mailto:safa.sellam@outlook.fr" class="contacts">Contact</a>
       </ul>
     </footer>
   </body>
