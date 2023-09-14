@@ -134,10 +134,82 @@ p {
     padding: 0;
 }
 
+.elipsis {
+    text-overflow: ellipsis;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     width: 100%;
     margin: 0;
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#loader-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    position: fixed;
+    padding: 20%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    color: black;
+    opacity: 0;
+    -webkit-animation: fadeOut 2s;
+    animation: fadeOut 3s;
+}
+
+.dot {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #353535;
+    margin: 0 15px;
+    animation: loader infinite 0.3s alternate;
+}
+
+.d2 {
+    animation-delay: 0.05s;
+}
+
+.d3 {
+    animation-delay: 0.13s;
+}
+
+@keyframes loader {
+    100% {
+        transform: translateY(-30PX);
+    }
 }
 
 .header_menu {
@@ -201,6 +273,7 @@ body {
 
 .button_rose {
     border-radius: 25px;
+    box-shadow: 1px 5px 5px lightgrey;
     width: 218px;
     height: 50px;
     margin-top: 30px;
@@ -208,6 +281,7 @@ body {
 
 .button_rose:hover {
     cursor: pointer;
+    box-shadow: 1px 5px 5px grey;
     background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%),
         linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
 
@@ -215,6 +289,7 @@ body {
 
 .fonctionnement_bouton {
     position: relative;
+    box-shadow: 1px 5px 14px lightgray;
     border-radius: 20px;
     width: 90%;
     height: 72px;
@@ -265,14 +340,19 @@ body {
 }
 
 .restaurant_card {
-
+    cursor: pointer;
     width: 90%;
-    margin: auto;
+    margin: 2% auto;
 }
 
 .restaurant_card--photo {
     border-radius: 20px 20px 0px 0px;
     height: 230px;
+}
+
+.container_textCard {
+    border-radius: 0 0 20px 20px;
+    padding: 2%;
 }
 
 .icone_coeur-label .icone_coeur {
@@ -298,19 +378,81 @@ body {
 
 .hidden-checkbox:checked+.icone_coeur-label .icone_coeurPlein {
     display: block !important;
-    color: #9356dc;
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    margin: -1%;
+    background: radial-gradient(circle at 30% -33%, #9356DC -11.44%, #FF79DA 123.93%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+}
 
+.menu_card--container {
+    box-shadow: 1px 5px 14px lightgray;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 20px;
+}
+
+.slide_in {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    align-items: center;
+    background-color: #99E2D0;
+    color: white;
+    padding: 0 25px;
+    border-radius: 0 20px 0 0;
+}
+
+.slide_in i {
+    margin-right: 5px;
+}
+
+/* Animation de glissement au survol */
+.menu_card--container:hover .slide_in {
+    display: flex;
+    animation: slideIn 0.5s ease-in-out forwards;
+}
+
+/* Définition de l'animation avec keyframes pour le slide-in */
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Animation de déplacement du prix */
+.menu_card--container:hover .container_text .price-container {
+    animation: movePrice 0.5s ease-in-out forwards;
+}
+
+/* Définition de l'animation avec keyframes pour le déplacement du prix */
+@keyframes movePrice {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-220%);
+    }
+}
+
+
+.price-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 
 
-
-.container_textCard {
-    padding: 20px 25px 15px 10px;
-    margin-bottom: 4%;
-    border-radius: 0px 0px 20px 20px;
-}
 
 footer {
     padding: 20px;
@@ -329,7 +471,11 @@ footer {
 .restaurant_header--photo {
     position: relative;
     z-index: -1;
+}
 
+.contacts {
+    text-decoration: none;
+    color: white;
 }
 
 #menu {
@@ -338,6 +484,36 @@ footer {
     margin: 0 auto;
     padding: 3%;
     margin-top: -15%;
+}
+
+@keyframes slide {
+    from {
+        margin-left: 100%;
+        width: 0%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+.delay_1 {
+    animation-duration: 4s;
+    animation-delay: 1.5s;
+    animation-name: slide;
+}
+
+.delay_2 {
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-name: slide;
+}
+
+.delay_3 {
+    animation-duration: 4s;
+    animation-delay: 3s;
+    animation-name: slide;
 }
 
 .title_menu {
@@ -353,7 +529,7 @@ footer {
 .menu_card--container {
     margin: 3% auto;
     border-radius: 20px;
-    padding: 4%;
+    padding: 2%;
 }
 
 .menu_button {
@@ -361,8 +537,13 @@ footer {
 }
 
 .title_underline {
-    padding-bottom: 6px;
+    padding-bottom: 4px;
+    margin-bottom: 1%;
     border-bottom: 4px solid #99E2D0;
+}
+
+.title_padding {
+    padding-bottom: 1%;
 }
 
 .home_newMenu {
