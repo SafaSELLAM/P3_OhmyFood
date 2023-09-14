@@ -42,78 +42,128 @@
       <section id="menu" class="backGris center column">
         <div class="title_menu row between">
           <h1 class="font_Logo--title font_size--title">La palette du goût</h1>
-          <i class="fa-regular fa-heart fa-2xl"></i>
+          <input type="checkbox" id="coeur-checkbox5" class="hidden-checkbox" />
+          <label for="coeur-checkbox5" class="icone_coeur-label">
+            <i class="fa-solid fa-heart fa-xl center icone_coeurPlein"></i>
+            <i class="fa-regular fa-heart fa-xl center icone_coeur"></i>
+          </label>
         </div>
-        <div class="details_menu">
+        <div class="details_menu delay_1">
           <h2 class="light"><span class="title_underline">ENTR</span>EES</h2>
           <div class="menu_card--container column backWhite">
-            <h3>Fricassée d'escargots</h3>
+            <h3 class="title_padding elipsis">Fricassée d'escargots</h3>
+
             <div class="container_text row between">
-              <p>Au piment d'Espelette</p>
-              <p>25€</p>
+              <p class="elipsis">Au piment d'Espelette</p>
+              <div class="price-container">
+                <p class="price bold">25€</p>
+              </div>
+            </div>
+            <div class="slide_in">
+              <i class="fa-regular fa-circle-check"></i>
             </div>
           </div>
           <div class="menu_card--container column backWhite">
-            <h3>Foie gras de canard mi-cuit</h3>
+            <h3 class="title_padding">Foie gras de canard mi-cuit</h3>
             <div class="container_text row between">
               <p>Et ses copeaux de truffe noire</p>
-              <p>35€</p>
+              <div class="price-container">
+                <p class="price bold">35€</p>
+              </div>
+            </div>
+            <div class="slide_in">
+              <i class="fa-regular fa-circle-check"></i>
             </div>
           </div>
           <div class="menu_card--container column backWhite">
-            <h3>Œuf au plat</h3>
+            <h3 class="title_padding">Œuf au plat</h3>
             <div class="container_text row between">
               <p>Assaisonné à la truffe sur lit de caviar</p>
-              <p>20€</p>
+              <div class="price-container">
+                <p class="price bold">20€</p>
+              </div>
+            </div>
+            <div class="slide_in">
+              <i class="fa-regular fa-circle-check"></i>
             </div>
           </div>
         </div>
-        <div class="details_menu">
+        <div class="details_menu delay_2">
           <h2 class="light"><span class="title_underline">PLAT</span>S</h2>
 
           <div class="menu_card--container column backWhite">
-            <h3>Filet de bœuf aux herbes</h3>
+            <h3 class="title_padding">Filet de bœuf aux herbes</h3>
             <div class="container_text row between">
               <p>Accompagné de sa ribambelle de légumes</p>
-              <p>40€</p>
+              <div class="price-container">
+                <p class="price bold">40€</p>
+              </div>
+            </div>
+            <div class="slide_in">
+              <i class="fa-regular fa-circle-check"></i>
             </div>
           </div>
           <div class="menu_card--container column backWhite">
-            <h3>Parmentier de queue de bœuf</h3>
+            <h3 class="title_padding">Parmentier de queue de bœuf</h3>
             <div class="container_text row between">
               <p>À la truffe noire sur sa purée de panais</p>
-              <p>35€</p>
+              <div class="price-container">
+                <p class="price bold">35€</p>
+              </div>
+            </div>
+            <div class="slide_in">
+              <i class="fa-regular fa-circle-check"></i>
             </div>
           </div>
           <div class="menu_card--container column backWhite">
-            <h3>Filet de turbot</h3>
+            <h3 class="title_padding">Filet de turbot</h3>
             <div class="container_text row between">
               <p>Aux agrumes</p>
-              <p>44€</p>
+              <div class="price-container">
+                <p class="price bold">44€</p>
+              </div>
+            </div>
+            <div class="slide_in">
+              <i class="fa-regular fa-circle-check"></i>
             </div>
           </div>
         </div>
-        <div class="details_menu">
+        <div class="details_menu delay_3">
           <h2 class="light"><span class="title_underline">DESS</span>ERTS</h2>
           <div class="menu_card--container column backWhite">
-            <h3>Paris-Brest</h3>
+            <h3 class="title_padding">Paris-Brest</h3>
             <div class="container_text row between">
               <p>Revisité</p>
-              <p>18€</p>
+              <div class="price-container">
+                <p class="price bold">18€</p>
+              </div>
+            </div>
+            <div class="slide_in">
+              <i class="fa-regular fa-circle-check"></i>
             </div>
           </div>
           <div class="menu_card--container column backWhite">
-            <h3>Macaron au chocolat d'exception</h3>
+            <h3 class="title_padding">Macaron au chocolat d'exception</h3>
             <div class="container_text row between">
               <p>Et glace à la vanille de Madagascar</p>
-              <p>22€</p>
+              <div class="price-container">
+                <p class="price bold">22€</p>
+              </div>
+            </div>
+            <div class="slide_in">
+              <i class="fa-regular fa-circle-check"></i>
             </div>
           </div>
           <div class="menu_card--container column backWhite">
-            <h3>Mousse au chocolat</h3>
+            <h3 class="title_padding">Mousse au chocolat</h3>
             <div class="container_text row between">
               <p>Au piment d'Espelette et à la truffe noire</p>
-              <p>23€</p>
+              <div class="price-container">
+                <p class="price bold">23€</p>
+              </div>
+            </div>
+            <div class="slide_in">
+              <i class="fa-regular fa-circle-check"></i>
             </div>
           </div>
         </div>
@@ -134,8 +184,10 @@
         <li class="footer_link">
           <i class="fa-solid fa-handshake-angle"></i> Devenir partenaire
         </li>
-        <li class="footer_link">Mantions légales</li>
-        <li class="footer_link">Contact</li>
+        <li class="footer_link">Mentions légales</li>
+        <li class="footer_link">
+          <a href="mailto:safa.sellam@outlook.fr" class="contacts">Contact</a>
+        </li>
       </ul>
     </footer>
   </body>
