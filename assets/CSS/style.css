@@ -487,6 +487,47 @@ footer {
 
 @keyframes slide {
     from {
+        margin-left: 150%;
+        width: 0%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+.details_menu {
+    animation-duration: 2s;
+    /* Réduisez la durée de l'animation pour une transition plus douce */
+    animation-fill-mode: both;
+    /* Assurez-vous que les styles sont appliqués à la fin de l'animation */
+}
+
+.delay_1 {
+    animation-name: slide;
+    /* Ajoutez l'appel à l'animation */
+    animation-delay: 0.5s;
+    /* Déclenchez le premier élément plus tôt */
+}
+
+.delay_2 {
+    animation-name: slide;
+    /* Ajoutez l'appel à l'animation */
+    animation-delay: 1s;
+    /* Déclenchez le deuxième élément après le premier */
+}
+
+.delay_3 {
+    animation-name: slide;
+    /* Ajoutez l'appel à l'animation */
+    animation-delay: 1.5s;
+    /* Déclenchez le troisième élément après le deuxième */
+}
+
+/* 
+@keyframes slide {
+    from {
         margin-left: 100%;
         width: 0%;
     }
@@ -513,7 +554,7 @@ footer {
     animation-duration: 4s;
     animation-delay: 3s;
     animation-name: slide;
-}
+} */
 
 .title_menu {
     padding: 4%;
