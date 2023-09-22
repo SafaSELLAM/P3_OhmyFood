@@ -134,7 +134,11 @@ p {
     padding: 0;
 }
 
-.elipsis {
+.elipsis h1,
+h3,
+p {
+    white-space: nowrap;
+    overflow: hidden;
     text-overflow: ellipsis;
 }
 
@@ -251,11 +255,10 @@ body {
     padding: 10%;
 }
 
-.section_textReservation h1,
-p {
+#section_info .section_textReservation h1,
+#section_info .section_textReservation p {
     text-align: center;
     padding-bottom: 2%;
-    ;
 }
 
 .padding_section {
@@ -374,7 +377,23 @@ p {
     background: radial-gradient(circle at 30% -33%, #9356DC -11.44%, #FF79DA 123.93%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    opacity: 0;
     line-height: 1;
+    animation: fillHeart 1s ease-in-out forwards;
+}
+
+@keyframes fillHeart {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 50;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .menu_card--container {
@@ -383,6 +402,12 @@ p {
     overflow: hidden;
     width: 100%;
     padding: 20px;
+}
+
+.menu_card--container:hover h3,
+.menu_card--container:hover .container_text {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .slide_in {
@@ -431,7 +456,7 @@ p {
     }
 
     100% {
-        transform: translateX(-220%);
+        transform: translateX(-250%);
     }
 }
 
@@ -442,8 +467,6 @@ p {
     position: relative;
     z-index: 1;
 }
-
-
 
 
 footer {
@@ -520,41 +543,8 @@ footer {
 
 .delay_3 {
     animation-name: slide;
-    /* Ajoutez l'appel à l'animation */
     animation-delay: 1.5s;
-    /* Déclenchez le troisième élément après le deuxième */
 }
-
-/* 
-@keyframes slide {
-    from {
-        margin-left: 100%;
-        width: 0%;
-    }
-
-    to {
-        margin-left: 0%;
-        width: 100%;
-    }
-}
-
-.delay_1 {
-    animation-duration: 4s;
-    animation-delay: 1.5s;
-    animation-name: slide;
-}
-
-.delay_2 {
-    animation-duration: 4s;
-    animation-delay: 2s;
-    animation-name: slide;
-}
-
-.delay_3 {
-    animation-duration: 4s;
-    animation-delay: 3s;
-    animation-name: slide;
-} */
 
 .title_menu {
     padding: 4%;
@@ -602,6 +592,8 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+
+
     .size_40 {
         font-size: 40px;
     }
@@ -643,6 +635,16 @@ footer {
     .title_menu {
         width: 33%;
         padding: 0;
+    }
+
+    @keyframes movePrice {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-220%);
+        }
     }
 
     #menu {
