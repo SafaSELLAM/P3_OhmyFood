@@ -148,6 +148,13 @@ body {
     margin: 0;
 }
 
+.header_menuLocation {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: inherit;
+    color: inherit;
+}
 
 #loader-container {
     display: flex;
