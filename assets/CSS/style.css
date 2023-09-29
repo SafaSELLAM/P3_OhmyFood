@@ -397,17 +397,20 @@ body {
 }
 
 .menu_card--container {
+    margin: 3% auto;
+    border-radius: 20px;
+    padding: 2%;
     box-shadow: 1px 5px 14px lightgray;
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding: 20px;
 }
 
 .menu_card--container:hover h3,
-.menu_card--container:hover .container_text {
+.menu_card--container:hover .text_elipsis {
     overflow: hidden;
     text-overflow: ellipsis;
+    width: calc(70% - 30px);
 }
 
 .slide_in {
@@ -427,13 +430,11 @@ body {
     margin-right: 5px;
 }
 
-/* Animation de glissement au survol */
 .menu_card--container:hover .slide_in {
     display: flex;
     animation: slideIn 0.5s ease-in-out forwards;
 }
 
-/* Définition de l'animation avec keyframes pour le slide-in */
 @keyframes slideIn {
     0% {
         transform: translateX(100%);
@@ -444,12 +445,10 @@ body {
     }
 }
 
-/* Animation de déplacement du prix */
 .menu_card--container:hover .container_text .price-container {
     animation: movePrice 0.5s ease-in-out forwards;
 }
 
-/* Définition de l'animation avec keyframes pour le déplacement du prix */
 @keyframes movePrice {
     0% {
         transform: translateX(0);
@@ -459,7 +458,6 @@ body {
         transform: translateX(-250%);
     }
 }
-
 
 .price-container {
     display: flex;
@@ -522,23 +520,17 @@ footer {
 
 .details_menu {
     animation-duration: 2s;
-    /* Réduisez la durée de l'animation pour une transition plus douce */
     animation-fill-mode: both;
-    /* Assurez-vous que les styles sont appliqués à la fin de l'animation */
 }
 
 .delay_1 {
     animation-name: slide;
-    /* Ajoutez l'appel à l'animation */
     animation-delay: 0.5s;
-    /* Déclenchez le premier élément plus tôt */
 }
 
 .delay_2 {
     animation-name: slide;
-    /* Ajoutez l'appel à l'animation */
     animation-delay: 1s;
-    /* Déclenchez le deuxième élément après le premier */
 }
 
 .delay_3 {
@@ -554,12 +546,6 @@ footer {
 
 .details_menu {
     width: 100%;
-}
-
-.menu_card--container {
-    margin: 3% auto;
-    border-radius: 20px;
-    padding: 2%;
 }
 
 .menu_button {
